@@ -1,0 +1,17 @@
+# Executáveis
+*.jar
+
+# Arquivos de log e runtime do Minecraft
+paper/logs/
+paper/world/
+paper/world_nether/
+paper/world_the_end/
+paper/cache/
+paper/plugins/
+proxy/logs/
+proxy/modules/
+proxy/plugins/
+
+# Arquivos de sistema
+.DS_Store
+*.log
