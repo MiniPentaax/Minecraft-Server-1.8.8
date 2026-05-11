@@ -1,55 +1,48 @@
 listeners:
-  - host: 0.0.0.0:25577
-    motd: "§aWaterfall Proxy §7(1.8.8)"
-    tab_list: GLOBAL_PING
-    query_enabled: false
-    proxy_protocol: false
-    forced_hosts: {}
-    ping_passthrough: false
-    priorities:
-      - lobby
-    motd_changes_alert: false
-    tab_size: 60
-    ping_passthrough: false
-    enforce_secure_profile: false
-    ping_passthrough_protocol: false
-    forced_default_server: false
-    bind_local_address: true
-    host: 0.0.0.0:25577
-    max_players: 100
-
-servers:
-  lobby:
-    motd: "§aPaper 1.8.8 Backend"
-    address: 127.0.0.1:25565
-    restricted: false
-
-timeout: 30000
-restart-on-crash: false
-player_limit: 100
+- query_port: 25577
+  motd: '&bRede Minecraft &7- &fEstilo Hylex\n&eServidor em Manutencao'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  forced_hosts:
+    pvp.md-5.net: lobby
+  ping_passthrough: false
+  priorities:
+  - lobby
+  bind_local_address: true
+  host: 0.0.0.0:25577
+  max_players: 1000
+  tab_size: 60
+  force_default_server: true
+remote_ping_cache: -1
+network_compression_threshold: 256
 permissions:
   default:
-    - bungeecord.command.server
-    - bungeecord.command.list
-connection_throttle: 4000
-prevent_proxy_connections: false
-force_default_server: false
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
 log_pings: true
-proxy_protocol: false
-online_mode: false
-query_enabled: false
-announce_player_moves: true
-show_max_players: true
-forwarding_mode: MODERN
-forge_support: false
-disabled_commands:
-  - disabledcommandhere
-connection_throttle: 4000
-player_limit: 100
-ip_forward: true
-network_compression_threshold: 256
-groups:
-  md_5:
-    - admin
+connection_throttle_limit: 3
 server_connect_timeout: 5000
-server_ping_timeout: 5000
+timeout: 30000
+stats: f847f9e5-9494-4c4c-8f8e-4a4a4a4a4a4a
+player_limit: -1
+ip_forward: true
+groups:
+  MiniPentaax:
+  - admin
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+prevent_proxy_connections: false
+online_mode: false
+forge_support: false
+servers:
+  lobby:
+    motd: '&bLobby Principal'
+    address: localhost:25565
+    restricted: false
